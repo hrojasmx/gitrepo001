@@ -20,7 +20,7 @@ aliases:
     run:
       name: Install dependencies
       command: npm install
-  - &save_cache
+  - &save-cache
     save-cache:
       paths:
         - node_modules
@@ -51,7 +51,7 @@ jobs:
       - *show-current-branch-name
       - *restore-cache
       - *install-dependencies
-      - *save_cache
+      - *save-cache
 
   deploy-to-aws-s3:
     executor: app-executor
