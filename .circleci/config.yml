@@ -115,9 +115,9 @@ workflows:
         filters:
           branches:
             only:
-              - develop
+              - development
               - staging
-              - master
+              - production
       - deploy-to-aws-s3:
           requires:
             - linting
